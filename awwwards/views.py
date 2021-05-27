@@ -26,7 +26,9 @@ def index(request):
 
 @login_required(login_url='/accounts/login/')
 def profile(request, username):
-    return render(request, 'profile.html')
+    projects = request.user.projects.all()
+
+    return render(request, 'profile.html', {'projects':projects})
 
 
 
