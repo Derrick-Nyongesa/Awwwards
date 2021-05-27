@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from .forms import ProjectsForm,UserForm,ProfileForm
 from .models import Projects,Profile
@@ -60,6 +60,14 @@ def edit_profile(request, username):
         prof_form = ProfileForm(instance=request.user.profile)
 
     return render(request, 'update_profile.html', {'user_form': user_form, 'prof_form': prof_form})
+
+
+def user_profile(request, username):
+    user_prof = get_object_or_404(User, username=username)
+    if request.user == user_prof:
+        return redirect('profile', username=request.user.username)
+    
+    return render(request, 'userprofile.html', {'user_prof': user_prof})
 
 
 
