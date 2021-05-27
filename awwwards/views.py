@@ -22,13 +22,26 @@ def index(request):
 
     return render(request, 'index.html', {'form':form, 'projects':projects})
 
-    
 
 @login_required(login_url='/accounts/login/')
 def profile(request, username):
     projects = request.user.projects.all()
 
     return render(request, 'profile.html', {'projects':projects})
+
+
+@login_required(login_url='/accounts/login/')
+def search_project(request):
+    if request.method == 'GET':
+        title = request.GET.get("title")
+        results = Projects.objects.filter(title__icontains=title).all()
+        print(results)
+        message = f'name'
+        
+        return render(request, 'results.html', {'results':results, 'message': message})
+    else:
+        message = "You haven't searched for any image category"
+    return render(request, 'results.html', {'message': message})
 
 
 
