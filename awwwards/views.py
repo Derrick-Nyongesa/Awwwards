@@ -17,8 +17,9 @@ def index(request):
             project.save()
     else:
         form = ProjectsForm()
+    projects = Projects.objects.all()
 
-    return render(request, 'index.html', {'form': form})
+    return render(request, 'index.html', {'form': form, 'projects':projects})
 
 
 @login_required(login_url='/accounts/login/')
