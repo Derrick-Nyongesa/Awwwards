@@ -5,8 +5,8 @@ from django.conf import settings
 
 urlpatterns = [
     path('',views.index, name='homePage'),
-    #path('api/awwwards/', views.ProfileList.as_view()),
-    path('api/awwwards/', views.ProjectsList.as_view()),
+    path('api/awwwards/profiles/', views.ProfileList.as_view()),
+    path('api/awwwards/projects/', views.ProjectsList.as_view()),
     path('profile/<username>/', views.profile, name='profile'),
     #path('project/<projects>', views.single_project, name='project'),
     path('search/', views.search_project, name='search'),
