@@ -1,5 +1,7 @@
 h1{
-    color: red;
+    color: #e5383b;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 img{
@@ -8,4 +10,37 @@ img{
     
     border-radius: 10px;
     
+}
+
+body{
+    background-color: #0b090a;
+}
+
+.modalcard{
+    background-color:rgba(10,10,10,0.8);
+    color:white;
+    padding:3%;
+    border:none;
+}
+
+.title{
+    font-weight: bold;
+}
+
+p{
+    color: #adb5bd;
+}
+
+.para{
+    font-size: 16px;
+}
+
+.title2, .name{
+    font-weight: bold;
+    color: #e5383b;
+}
+
+.form{
+    background-color: #adb5bd;
+    padding: 10px;
 }
