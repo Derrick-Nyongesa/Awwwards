@@ -62,6 +62,7 @@ def edit_profile(request, username):
     return render(request, 'update_profile.html', {'user_form': user_form, 'prof_form': prof_form})
 
 
+@login_required(login_url='/accounts/login/')
 def user_profile(request, username):
     user_prof = get_object_or_404(User, username=username)
     if request.user == user_prof:
