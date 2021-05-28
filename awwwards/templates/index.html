@@ -1,15 +1,14 @@
 {% extends 'base.html' %}
-{% load static %}
 {% load bootstrap3 %}
+{% load static %}
+{% load cloudinary %}
 
 {% block content %}
 
 <div class="container">
-    <h1>Awwwards</h1>
-
-<button class="btn btn-info btn-sm" id="site" data-toggle="modal" data-target=".bd-example-modal-xl">
-   Post a Project
-</button>
+    <button class="btn btn-info btn-sm" id="site" data-toggle="modal" data-target=".bd-example-modal-xl">
+        Post a Project
+    </button>
 
 {% if user.is_authenticated %}
         <div class="modal fade bd-example-modal-xl" id="ModalCenter" tabindex="-1" role="dialog"
@@ -41,14 +40,24 @@
 
 
 
-<h2>All Projects</h2>
-{% if projects %}
-    {% for project in projects %}
-        <h4><a href="{% url 'project' project.id %}">{{project.title|title}}</a></h4>
+<h1 class="text-center">All Projects</h1>
+    <div class="row">
+        {% if projects %}
+    
+        {% for project in projects %}
+            <div class="col-sm-6 col-md-4">
+                <h4><a href="{% url 'project' project.id %}">{{project.title|title}}</a></h4>
+        {% cloudinary project.image format="jpg" width=500 height=400 crop="fill"  %}
         
-        <p>By: <a href="{% url 'userprofile' project.user.username %}">{{project.user.username|title}}</a> </p>
-    {% endfor %}
-{% endif %}
+        <p>By: <a href="{% url 'userprofile' project.user.username %}">{{project.user.username|title}}</a> On: {{project.date}}</p>
+            </div>
+        
+        {% endfor %}
+        {% endif %}
+    </div>
+
+    
+        
 
 </div>
 
