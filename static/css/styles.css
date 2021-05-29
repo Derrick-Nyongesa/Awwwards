@@ -44,3 +44,16 @@ p{
     background-color: #adb5bd;
     padding: 10px;
 }
+
+.rating{
+    font-size: 25px;
+    font-weight: bold;
+    padding-bottom: 5px;
+    
+    
+}
+
+.title3{
+    color: #027bce;
+    font-weight: bold;
+}

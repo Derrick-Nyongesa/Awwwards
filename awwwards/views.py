@@ -79,11 +79,7 @@ def project(request, id):
     project = get_object_or_404(Projects, pk=id)
     ratings = Rating.objects.filter(user=request.user, projects=project).first()
     current_user = request.user
-    rating_status = None
-    if ratings is None:
-        rating_status = False
-    else:
-        rating_status = True
+   
     if request.method == 'POST':
         form = RatingsForm(request.POST)
         if form.is_valid():

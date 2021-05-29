@@ -10,17 +10,22 @@
             {% cloudinary project.image format="jpg" width=1200 height=600 crop="fill"  %}
         </div>
         <div>
-            <h2 class="title2">{{project.title|title}}</h2>
+            <h2 class="title3">{{project.title|title}}</h2>
             <p class="para">{{ project.description }}</p>
             <a href="{{ project.url }}" class="btn btn-success">Visit Site</a>
         </div>
+        <hr>
 
         <div>
-            <h2 class="title2">Ratings</h2>
-            
+            <h2 class="title2 text-center">Ratings</h2>
+            <p class=" btn btn-info rating"> Average design: {{design}} </p><br><br>
+            <p class=" btn btn-success rating"> Average usability: {{usability}} </p><br><br>
+            <p class=" btn btn-warning rating"> Average content: {{content}} </p><br><br>
+            <p class=" btn btn-danger rating">Average Score: {{score}}</p><br><br><br>
         </div>
         <div>
-            
+           
+            <h2 class="text-center title2">Rate the Project</h2>
             {% if user.is_authenticated %}
             <div class="form">
                 <form action="" method="post" enctype="multipart/form-data">
@@ -31,11 +36,6 @@
             </div>
             
             {% endif %}
-
-            <div> Average design: {{design}} </div>
-            <div> Average usability: {{usability}} </div>
-            <div> Average content: {{content}} </div>
-            <div>score: {{score}}</div>
             
         </div>
 
