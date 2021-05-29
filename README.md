@@ -18,7 +18,7 @@ This is a django application that allows users to post their projects for others
 ## API ENDPOINTS
 [Projects API Endpoint: https://derrick-awwwards.herokuapp.com/api/awwwards/projects/](https://derrick-awwwards.herokuapp.com/api/awwwards/projects/)
 
-[Projects API Endpoint: https://derrick-awwwards.herokuapp.com/api/awwwards/profiles/](https://derrick-awwwards.herokuapp.com/api/awwwards/profiles/)
+[Profiles API Endpoint: https://derrick-awwwards.herokuapp.com/api/awwwards/profiles/](https://derrick-awwwards.herokuapp.com/api/awwwards/profiles/)
 
 
 ## Entity relationship diagram 
