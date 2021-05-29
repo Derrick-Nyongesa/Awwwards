@@ -12,7 +12,7 @@ This is a django application that allows users to post their projects for others
 
 
 ## MOCKUP DESIGN
-[Mock Design](https://www.figma.com/proto/OI47QDVqpRzEqSwQBb0Pq8/IP3?node-id=1%3A5&scaling=min-zoom&page-id=0%3A1)
+[Mock Design Link](https://www.figma.com/proto/OI47QDVqpRzEqSwQBb0Pq8/IP3?node-id=1%3A5&scaling=min-zoom&page-id=0%3A1)
 
 ## Project setup instructions
 1. Pull project from github Repository.
@@ -42,7 +42,9 @@ git clone https://github.com/Derrick-Nyongesa/Awwwards.git
 
 
 ## Entity relationship diagram 
-![ERD - Page 1](https://user-images.githubusercontent.com/78686755/119230514-327a6c00-bb25-11eb-83df-227d3cd58ee4.jpeg)
+![ERD - Page 1](https://user-images.githubusercontent.com/78686755/120072442-9f997e80-c09c-11eb-8a7f-745ff2d4643c.png)
+
+[ERD Diagram Link](https://lucid.app/lucidchart/a59504c6-b082-4918-86a3-d385cee5ddf9/edit?page=0_0#)
 
 
 
